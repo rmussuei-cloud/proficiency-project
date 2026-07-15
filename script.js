@@ -1,0 +1,1 @@
+function corrigir(){let a=document.querySelector('input[name=q1]:checked');let p=a?Number(a.value):0;let n=p? 'A1+':'A1';document.getElementById('r').innerHTML='Resultado: '+n;}
