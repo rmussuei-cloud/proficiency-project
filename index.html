@@ -1,205 +1,188 @@
 <!DOCTYPE html>
 <html lang="pt">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Teste de Proficiência</title>
+<title>Proficiency Project | Teste de Proficiência em Inglês</title>
 
-<style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-body{
-font-family:Arial;
-background:#f4f6f8;
-margin:0;
-}
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-.container{
-
-max-width:800px;
-margin:auto;
-background:white;
-padding:30px;
-margin-top:30px;
-border-radius:10px;
-box-shadow:0 0 10px rgba(0,0,0,.2);
-
-}
-
-h1{
-
-text-align:center;
-color:#0b2d5c;
-
-}
-
-input{
-
-width:100%;
-padding:12px;
-margin-bottom:15px;
-
-}
-
-.question{
-
-margin-top:25px;
-
-}
-
-button{
-
-background:#00a86b;
-color:white;
-border:none;
-padding:15px;
-font-size:18px;
-cursor:pointer;
-border-radius:6px;
-width:100%;
-
-}
-
-button:hover{
-
-background:#00895b;
-
-}
-
-#resultado{
-
-margin-top:30px;
-font-size:22px;
-text-align:center;
-
-}
-
-</style>
+<link rel="stylesheet" href="style.css">
 
 </head>
 
 <body>
 
+<header>
+
 <div class="container">
 
-<h1>Teste de Proficiência</h1>
+<div class="logo">
 
-<input type="text" placeholder="Nome" id="nome">
-
-<input type="text" placeholder="WhatsApp">
-
-<input type="text" placeholder="Cidade">
-
-<div class="question">
-
-<p><b>1.</b> She ____ to school every day.</p>
-
-<label><input type="radio" name="q1" value="1"> goes</label><br>
-
-<label><input type="radio" name="q1" value="0"> go</label><br>
-
-<label><input type="radio" name="q1" value="0"> going</label>
+Proficiency <span>Project</span>
 
 </div>
 
-<div class="question">
+<nav>
 
-<p><b>2.</b> I ____ a teacher.</p>
+<a href="#inicio">Início</a>
 
-<label><input type="radio" name="q2" value="1"> am</label><br>
+<a href="#sobre">Sobre</a>
 
-<label><input type="radio" name="q2" value="0"> is</label><br>
+<a href="#vantagens">Vantagens</a>
 
-<label><input type="radio" name="q2" value="0"> are</label>
+<a href="#cursos">Cursos</a>
 
-</div>
+<a href="#contacto">Contacto</a>
 
-<div class="question">
+</nav>
 
-<p><b>3.</b> They ____ football yesterday.</p>
+<a href="teste.html" class="btn-topo">
 
-<label><input type="radio" name="q3" value="1"> played</label><br>
+Fazer Teste
 
-<label><input type="radio" name="q3" value="0"> play</label><br>
-
-<label><input type="radio" name="q3" value="0"> playing</label>
+</a>
 
 </div>
 
-<div class="question">
+</header>
 
-<p><b>4.</b> If I ____ rich, I would travel.</p>
+<section class="hero" id="inicio">
 
-<label><input type="radio" name="q4" value="1"> were</label><br>
+<div class="overlay">
 
-<label><input type="radio" name="q4" value="0"> was</label><br>
+<div class="hero-content">
 
-<label><input type="radio" name="q4" value="0"> am</label>
+<h1>
+
+Descubra o seu verdadeiro nível de Inglês
+
+</h1>
+
+<p>
+
+Faça gratuitamente o teste de proficiência do Proficiency Project e descubra se está nos níveis A1, A2, B1, B2, C1 ou C2.
+
+</p>
+
+<div class="hero-buttons">
+
+<a href="teste.html" class="btn-primary">
+
+Começar Agora
+
+</a>
+
+<a href="https://wa.me/258871831693" target="_blank" class="btn-secondary">
+
+Falar no WhatsApp
+
+</a>
 
 </div>
 
-<div class="question">
-
-<p><b>5.</b> Choose the correct sentence.</p>
-
-<label><input type="radio" name="q5" value="1"> I have lived here for five years.</label><br>
-
-<label><input type="radio" name="q5" value="0"> I live here since five years.</label>
+</div>
 
 </div>
 
-<br>
+</section>
 
-<button onclick="corrigir()">
+<section class="estatisticas">
 
-Ver Resultado
+<div class="container">
 
-</button>
+<div class="item">
 
-<div id="resultado"></div>
+<h2>100%</h2>
+
+<p>Online</p>
 
 </div>
 
-<script>
+<div class="item">
 
-function corrigir(){
+<h2>CEFR</h2>
 
-let pontos=0;
+<p>Padrão Internacional</p>
 
-for(let i=1;i<=5;i++){
+</div>
 
-let r=document.querySelector("input[name=q"+i+"]:checked");
+<div class="item">
 
-if(r){
+<h2>24h</h2>
 
-pontos+=Number(r.value);
+<p>Suporte</p>
 
-}
+</div>
 
-}
+<div class="item">
 
-let nivel="A1 - Beginner";
+<h2>2026</h2>
 
-if(pontos==2)
+<p>Nova Edição</p>
 
-nivel="A2 - Elementary";
+</div>
 
-if(pontos==3)
+</div>
 
-nivel="B1 - Intermediate";
+</section>
 
-if(pontos>=4)
+<section class="sobre" id="sobre">
 
-nivel="B2 - Upper Intermediate";
+<div class="container">
 
-document.getElementById("resultado").innerHTML=
+<div class="texto">
 
-"<h2>Seu nível é: "+nivel+"</h2><br><a href='https://wa.me/258871831693?text=Olá.%20Fiz%20o%20teste%20de%20proficiência%20e%20gostaria%20de%20me%20inscrever.' target='_blank'><button>Continuar no WhatsApp</button></a>";
+<h2>
 
-}
+Aprenda Inglês de Forma Inteligente
 
-</script>
+</h2>
 
-</body>
+<p>
 
-</html>
+O Proficiency Project foi criado para ajudar estudantes, profissionais e candidatos a bolsas de estudo a conhecerem o seu nível real de inglês através de um teste rápido e confiável.
+
+</p>
+
+<p>
+
+Depois do teste, poderá inscrever-se no curso ideal para o seu nível e acompanhar a sua evolução.
+
+</p>
+
+<a href="teste.html" class="btn-primary">
+
+Fazer Teste
+
+</a>
+
+</div>
+
+<div class="imagem">
+
+<img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=900" alt="Estudantes">
+
+</div>
+
+</div>
+
+</section>
+
+<section class="vantagens" id="vantagens">
+
+<div class="container">
+
+<h2>
+
+Por que escolher o Proficiency Project?
+
+</h2>
+
+<div class="cards">
