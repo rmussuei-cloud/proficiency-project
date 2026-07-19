@@ -21,220 +21,169 @@
 
 <body>
 
-<div class="container">
+<header class="topo">
 
-<div class="card">
+<div class="logo">
 
-<h1>Teste de Proficiência em Inglês</h1>
+<h2>Proficiency Project</h2>
 
-<p class="subtitulo">
+</div>
 
-Descubra gratuitamente o seu nível de inglês segundo o CEFR (A1–C2).
+<div class="cronometro">
+
+Tempo restante
+
+<h3 id="tempo">
+
+10:00
+
+</h3>
+
+</div>
+
+</header>
+
+<main class="container">
+
+<section id="inicio">
+
+<h1>
+
+Teste de Proficiência em Inglês
+
+</h1>
+
+<p>
+
+Este teste avalia o seu nível de inglês de acordo com o CEFR (A1–C2).
+
+Responda às perguntas com atenção.
 
 </p>
 
-<div id="inicio">
-
-<div class="campo">
-
-<label>Nome Completo</label>
+<div class="formulario">
 
 <input
 type="text"
 id="nome"
-placeholder="Digite o seu nome">
-
-</div>
-
-<div class="campo">
-
-<label>WhatsApp</label>
+placeholder="Nome completo"
+required>
 
 <input
 type="tel"
 id="whatsapp"
-placeholder="84 ou 87...">
-
-</div>
-
-<div class="campo">
-
-<label>Email</label>
+placeholder="WhatsApp">
 
 <input
 type="email"
 id="email"
-placeholder="exemplo@email.com">
-
-</div>
-
-<div class="campo">
-
-<label>Cidade</label>
+placeholder="Email">
 
 <input
 type="text"
 id="cidade"
 placeholder="Cidade">
 
-</div>
-
 <button id="btnComecar">
 
-COMEÇAR TESTE
+Começar Teste
 
 </button>
 
 </div>
 
-<div id="teste" style="display:none;">
+</section>
 
-<div class="topo">
-
-<div>
-
-Tempo restante
-
-<h2 id="tempo">
-
-10:00
-
-</h2>
-
-</div>
-
-<div>
-
-Questão
-
-<h2>
-
-<span id="numero">
-
-1
-
-</span>/30
-
-</h2>
-
-</div>
-
-</div>
+<section id="prova" style="display:none;">
 
 <div class="barra">
 
-<div id="progresso"></div>
+<div id="barraProgresso"></div>
 
 </div>
 
-<div id="pergunta">
+<div class="contador">
+
+Pergunta
+
+<span id="numeroPergunta">
+
+1
+
+</span>
+
+de
+
+30
+
+</div>
+
+<div id="caixaPergunta">
+
+<h2 id="pergunta">
+
+Carregando pergunta...
+
+</h2>
 
 </div>
 
 <div id="alternativas">
 
+<!-- As alternativas aparecerão aqui -->
+
 </div>
+
+<div class="botoes">
+
+<button id="btnAnterior">
+
+Anterior
+
+</button>
 
 <button id="btnProxima">
 
-Próxima Pergunta
+Próxima
 
 </button>
 
 </div>
 
-</div>
-
-</div>
-
-<script src="teste.js"></script>
-<button id="btnProxima">
-Próxima Pergunta
-</button>
-<!-- Modal de Instruções -->
-
-<div id="instrucoes" class="modal">
-
-<div class="modal-content">
-
-<h2>Antes de começar</h2>
-
-<ul>
-
-<li>O teste possui <strong>30 perguntas</strong>.</li>
-
-<li>Você terá <strong>10 minutos</strong>.</li>
-
-<li>Leia cada pergunta com atenção.</li>
-
-<li>Escolha apenas uma resposta.</li>
-
-<li>Ao terminar verá o seu nível de inglês.</li>
-
-</ul>
-
-<button id="btnIniciarAgora">
-
-Começar Agora
-
-</button>
-
-</div>
-
-</div>
-
-</div>
-
-<!-- Tela Final -->
-
-<div id="resultadoFinal" style="display:none;">
+</section>
+<section id="resultado" style="display:none;">
 
 <div class="resultado-card">
 
-<h1>
+<h1>Teste Concluído!</h1>
 
-Parabéns!
+<p>Obrigado por concluir o teste de proficiência.</p>
 
-</h1>
+<div class="score">
 
-<p>
+<h2>Sua Pontuação</h2>
 
-Você concluiu o Teste de Proficiência.
+<h1 id="pontos">0/30</h1>
 
-</p>
+</div>
 
-<h2>
+<div class="nivel">
 
-Pontuação
+<h2>Seu Nível</h2>
 
-</h2>
+<h1 id="nivel">A1</h1>
 
-<h3 id="pontuacaoFinal">
+<p id="descricao">
 
-0/30
-
-</h3>
-
-<h2>
-
-Nível de Inglês
-
-</h2>
-
-<h1 id="nivelFinal">
-
-B1
-
-</h1>
-
-<p id="descricaoNivel">
-
-Texto do nível...
+O resultado será calculado automaticamente.
 
 </p>
 
-<a
-id="btnWhatsapp"
+</div>
+
+<div class="acoes">
+
+<a id="btnWhatsapp"
 target="_blank">
 
 <button>
@@ -255,7 +204,13 @@ Refazer Teste
 
 </div>
 
+</section>
+
+</main>
+
 <footer>
+
+<div class="rodape">
 
 <p>
 
@@ -263,4 +218,18 @@ Refazer Teste
 
 </p>
 
+<p>
+
+Teste de Proficiência em Inglês
+
+</p>
+
+</div>
+
 </footer>
+
+<script src="teste.js"></script>
+
+</body>
+
+</html>
