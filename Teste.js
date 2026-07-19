@@ -13,7 +13,6 @@ let candidato = {
 
 // Perguntas do teste
 const perguntas = [
-
 {
 pergunta:"She ____ to school every day.",
 opcoes:["go","goes","going","gone"],
